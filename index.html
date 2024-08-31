@@ -4,38 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Business Page with Advanced Chatbot - IntelliAi Marketing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <meta name="description" content="Get a custom digital business card landing page with an advanced GPT-4 powered chatbot for only $199. Boost your online presence with IntelliAi Marketing.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2C3E50; /* Blue */
-            --secondary-color: #BDC3C7; /* Silver */
-            --text-color: #ECF0F1; /* Light grey for better contrast */
-            --background-color: #34495E; /* Darker Blue */
-            --accent-color: #FF0000; /* Red for the price */
+            --primary-color: #2C3E50;
+            --secondary-color: #BDC3C7;
+            --text-color: #ECF0F1;
+            --background-color: #34495E;
+            --accent-color: #E74C3C;
+            --success-color: #2ECC71;
         }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         header {
             background-color: var(--primary-color);
-            color: var(--text-color);
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav ul {
             display: flex;
             justify-content: center;
             list-style-type: none;
-            padding: 0;
-            margin: 0;
         }
 
         nav ul li {
@@ -46,119 +60,178 @@
             color: var(--text-color);
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
         }
 
         main {
-            max-width: 100%;
-            padding: 2rem 0;
-            background-color: var(--background-color);
+            padding-top: 80px;
         }
 
         .section {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            padding: 2rem;
-            background-color: var(--primary-color);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            padding: 4rem 0;
         }
 
         #hero {
+            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
             text-align: center;
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            padding: 3rem 2rem;
+            padding: 6rem 0;
         }
 
         #hero h1 {
-            font-size: 2.5rem;
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
         }
 
         #hero h2 {
-            font-size: 1.8rem;
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.5s both;
         }
 
-        #hero .price {
-            font-size: 2.5rem;
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #C0392B;
+        }
+
+        .price {
+            font-size: 3rem;
             color: var(--accent-color);
             font-weight: bold;
-            margin-top: 1rem;
+            margin: 2rem 0;
+            animation: pulse 2s infinite;
         }
 
         h2 {
             color: var(--secondary-color);
+            margin-bottom: 1rem;
         }
 
-        #services ul {
-            list-style-type: none;
-            padding: 0;
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        #services li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--secondary-color);
+        .feature-item {
+            background-color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        #services li:last-child {
-            border-bottom: none;
+        .feature-item:hover {
+            transform: translateY(-5px);
         }
 
-        #services li::before {
-            content: "✓";
-            color: var(--secondary-color);
-            margin-right: 0.5rem;
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
         form {
             display: grid;
             gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
         input, textarea {
             width: 100%;
-            padding: 0.5rem;
+            padding: 0.8rem;
             border: 1px solid var(--secondary-color);
-            background-color: var(--background-color);
+            background-color: rgba(255, 255, 255, 0.1);
             color: var(--text-color);
             border-radius: 4px;
         }
 
         button[type="submit"] {
-            background-color: var(--secondary-color);
+            background-color: var(--accent-color);
             color: var(--text-color);
             border: none;
-            padding: 0.5rem 1rem;
+            padding: 0.8rem;
             cursor: pointer;
             border-radius: 4px;
             transition: background-color 0.3s;
+            font-weight: bold;
         }
 
         button[type="submit"]:hover {
-            background-color: var(--primary-color);
+            background-color: #C0392B;
         }
 
         footer {
             background-color: var(--primary-color);
             color: var(--text-color);
             text-align: center;
-            padding: 1rem;
-            box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
+            padding: 2rem 0;
+            margin-top: 4rem;
         }
 
-        @media (max-width: 840px) {
-            .section {
-                margin: 0 1rem 2rem;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            #hero h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="container">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#bclanding-page">BC Landing Page</a></li>
@@ -169,55 +242,97 @@
     </header>
     <main>
         <section id="hero">
-            <h1>Custom Business Page with Advanced Chatbot</h1>
-            <h2>by IntelliAi Marketing</h2>
-            <p class="price">$199</p>
+            <div class="container">
+                <h1>Custom Business Page with Advanced Chatbot</h1>
+                <h2>by IntelliAi Marketing</h2>
+                <p class="price">$199</p>
+                <a href="#contact" class="btn">Get Started Now</a>
+            </div>
         </section>
 
         <section id="about" class="section">
-            <h2>About Our Service</h2>
-            <p>IntelliAi Marketing offers a digital business card landing page with an advanced GPT-4 powered chatbot embedded, all for a one-time payment of $199. This incredible price includes an HTML/CSS landing page with a customized chatbot trained on your data.</p>
+            <div class="container">
+                <h2>About Our Service</h2>
+                <p>IntelliAi Marketing offers a digital business card landing page with an advanced GPT-4 powered chatbot embedded, all for a one-time payment of $199. This incredible price includes an HTML/CSS landing page with a customized chatbot trained on your data.</p>
+            </div>
         </section>
 
         <section id="bclanding-page" class="section">
-            <h2>BC Landing Page Details</h2>
-            <p>Our BC Landing Page is a custom-designed digital business card that perfectly aligns with your brand identity. It is developed using modern HTML and CSS, ensuring a responsive and visually appealing presentation. This landing page serves as the online face of your business, providing essential information in a clear and professional manner.</p>
-            <ul>
-                <li>Fully responsive design</li>
-                <li>Customizable to match your branding</li>
-                <li>Easy navigation for users</li>
-                <li>Includes essential business information</li>
-            </ul>
+            <div class="container">
+                <h2>BC Landing Page Details</h2>
+                <p>Our BC Landing Page is a custom-designed digital business card that perfectly aligns with your brand identity. It is developed using modern HTML and CSS, ensuring a responsive and visually appealing presentation.</p>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsive Design</h3>
+                        <p>Looks great on all devices</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Custom Branding</h3>
+                        <p>Matches your unique style</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Fast Loading</h3>
+                        <p>Optimized for performance</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔍</div>
+                        <h3>SEO Friendly</h3>
+                        <p>Helps improve visibility</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="chatbot-details" class="section">
-            <h2>Chatbot Details</h2>
-            <p>The embedded chatbot is powered by GPT-4 and is customized to your specific business needs. It is trained on your data to provide accurate and helpful responses to customer inquiries. This chatbot enhances customer engagement by providing instant support and can be a valuable tool for lead generation.</p>
-            <ul>
-                <li>Powered by GPT-4 for advanced AI capabilities</li>
-                <li>Trained on your business data</li>
-                <li>Provides instant customer support</li>
-                <li>Helps in lead generation and customer engagement</li>
-            </ul>
+            <div class="container">
+                <h2>Chatbot Details</h2>
+                <p>The embedded chatbot is powered by GPT-4 and is customized to your specific business needs. It is trained on your data to provide accurate and helpful responses to customer inquiries.</p>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🤖</div>
+                        <h3>GPT-4 Powered</h3>
+                        <p>Advanced AI capabilities</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📚</div>
+                        <h3>Custom Trained</h3>
+                        <p>Uses your business data</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💬</div>
+                        <h3>24/7 Support</h3>
+                        <p>Always available to help</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📈</div>
+                        <h3>Lead Generation</h3>
+                        <p>Boosts customer engagement</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="contact" class="section">
-            <h2>Get in Touch</h2>
-            <p>Ready to get your personalized business page with an advanced AI chatbot? Contact us now!</p>
-            <p>Phone: <a href="tel:your-phone-number">Your Phone Number</a></p>
-            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-            
-            <form name="contact" method="POST" data-netlify="true">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>Ready to get your personalized business page with an advanced AI chatbot? Contact us now!</p>
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 IntelliAi Marketing. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 IntelliAi Marketing. All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- Bot Script -->
