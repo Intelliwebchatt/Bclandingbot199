@@ -1,4 +1,10 @@
-description" content="Get a custom digital business card landing page with an advanced IntelliChatt bot for only $199. Boost your online presence with IntelliAi Pro Series.">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliAi Pro Series with IntelliChatt - Custom Business Page Solution</title>
+    <meta name="description" content="Get a custom digital business card landing page with an advanced IntelliChatt bot for only $199. Boost your online presence with IntelliAi Pro Series.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -7,3 +13,384 @@ description" content="Get a custom digital business card landing page with an ad
             --primary-color: rgba(44, 62, 80, 0.8);
             --secondary-color: rgba(189, 195, 199, 0.8);
             --text-color: #ECF0F1;
+            --background-color: #34495E;
+            --accent-color: rgba(231, 76, 60, 0.9);
+            --success-color: rgba(46, 204, 113, 0.9);
+            --glass-background: rgba(255, 255, 255, 0.1);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            background-attachment: fixed;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .glass-effect {
+            background: var(--glass-background);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: var(--glass-border);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--glass-background);
+            backdrop-filter: blur(10px);
+            border-bottom: var(--glass-border);
+            padding: 0.5rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            will-change: transform;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        main {
+            padding-top: 60px;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        #hero {
+            background-image: linear-gradient(rgba(44, 62, 80, 0.4), rgba(44, 62, 80, 0.4)), url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 6rem 0;
+            border-radius: 0 0 10px 10px;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        #hero h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.5s both;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--text-color);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: var(--glass-border);
+        }
+
+        .btn:hover {
+            background: rgba(231, 76, 60, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .price {
+            font-size: 4rem;
+            color: #FFD700;
+            font-weight: bold;
+            margin: 2rem 0;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+            animation: explosivePrice 2s infinite alternate;
+        }
+
+        @keyframes explosivePrice {
+            0% {
+                transform: scale(1);
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+            }
+            100% {
+                transform: scale(1.1);
+                text-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 165, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+            }
+        }
+
+        h2 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            will-change: transform;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--glass-background);
+            border: var(--glass-border);
+            color: var(--text-color);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        button[type="submit"] {
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            padding: 0.8rem;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        button[type="submit"]:hover {
+            background: rgba(231, 76, 60, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .section-cta {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        footer {
+            background: var(--glass-background);
+            backdrop-filter: blur(10px);
+            color: var(--text-color);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            border-top: var(--glass-border);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                justify-content: space-around;
+            }
+
+            nav ul li {
+                margin: 0;
+            }
+
+            nav ul li a {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            #hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .price {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#bclanding-page">BC</a></li>
+                <li><a href="#chatbot-details">IntelliChatt</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>IntelliAi Pro Series</h1>
+                <h2>Custom Business Page with IntelliChatt</h2>
+                <p class="price">$199</p>
+                <a href="#contact" class="btn">Get Started Now</a>
+            </div>
+        </section>
+
+        <section id="about" class="section glass-effect">
+            <div class="container">
+                <h2>About Our Service</h2>
+                <p>IntelliAi Pro Series offers a digital business card landing page with an advanced IntelliChatt bot embedded, all for a one-time payment of $199. This incredible price includes an HTML/CSS landing page with a customized chatbot trained on your data.</p>
+            </div>
+        </section>
+
+        <section id="bclanding-page" class="section glass-effect">
+            <div class="container">
+                <h2>BC Details</h2>
+                <p>Our BC Landing Page is a custom-designed digital business card that perfectly aligns with your brand identity. It is developed using modern HTML and CSS, ensuring a responsive and visually appealing presentation.</p>
+                <div class="feature-grid">
+                    <div class="feature-item glass-effect">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsive Design</h3>
+                        <p>Looks great on all devices</p>
+                    </div>
+                    <div class="feature-item glass-effect">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Custom Branding</h3>
+                        <p>Matches your unique style</p>
+                    </div>
+                    <div class="feature-item glass-effect">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Fast Loading</h3>
+                        <p>Optimized for performance</p>
+                    </div>
+                    <div class="feature-item glass-effect">
+                        <div class="feature-icon">🔍</div>
+                        <h3>SEO Friendly</h3>
+                        <p>Helps improve visibility</p>
+                    </div>
+                </div>
+                <div class="section-cta">
+                    <a href="#" class="btn">More Information on BC Landing Page</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="chatbot-details" class="section glass-effect">
+            <div class="container">
+                <h2>IntelliChatt Details</h2>
+                <p>The embedded IntelliChatt bot is powered by advanced AI and is customized to your specific business needs. It is trained on your data to provide accurate and helpful responses to customer inquiries.</p>
+                <div class="feature-grid">
+                    <div class="feature-item glass-effect">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI Powered</h3>
+                        <p>Advanced AI capabilities</p>
+                    </div>
+                    <div class="feature-item glass-effect">
+                        <div class="feature-icon">📚</div>
+                        <h3>Custom Trained</h3>
+                        <p>Uses your business data</p>
+                    </div>
+                    <div class="feature-item glass-effect">
+                        <div class="feature-icon">💬</div>
+                        <h3>24/7 Support</h3>
+                        <p>Always available to help</p>
+                    </div>
+                    <div class="feature-item glass-effect">
+                        <div class="feature-icon">📈</div>
+                        <h3>Lead Generation</h3>
+                        <p>Boosts customer engagement</p>
+                    </div>
+                </div>
+                <div class="section-cta">
+                    <a href="https://intellichatt.com" class="btn" target="_blank" rel="noopener noreferrer">Learn More About IntelliChatt</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section glass-effect">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>Ready to get your personalized business page with an advanced IntelliChatt bot? Contact us now!</p>
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    </antArtifact>
