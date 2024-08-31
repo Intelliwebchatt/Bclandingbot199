@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Business Page with Advanced Chatbot - IntelliAi Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2C3E50; /* Blue */
+            --secondary-color: #BDC3C7; /* Silver */
+            --text-color: #ECF0F1; /* Light grey for better contrast */
+            --background-color: #34495E; /* Darker Blue */
+            --accent-color: #FF0000; /* Red for the price */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 100%;
+            padding: 2rem 0;
+            background-color: var(--background-color);
+        }
+
+        .section {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        #hero {
+            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 3rem 2rem;
+        }
+
+        #hero h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        #hero h2 {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        #hero .price {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+        }
+
+        #services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #services li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+
+        #services li:last-child {
+            border-bottom: none;
+        }
+
+        #services li::before {
+            content: "✓";
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--secondary-color);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 840px) {
+            .section {
+                margin: 0 1rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#bclanding-page">BC Landing Page</a></li>
+                <li><a href="#chatbot-details">Chatbot Details</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Custom Business Page with Advanced Chatbot</h1>
+            <h2>by IntelliAi Marketing</h2>
+            <p class="price">$199</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Our Service</h2>
+            <p>IntelliAi Marketing offers a digital business card landing page with an advanced GPT-4 powered chatbot embedded, all for a one-time payment of $199. This incredible price includes an HTML/CSS landing page with a customized chatbot trained on your data.</p>
+        </section>
+
+        <section id="bclanding-page" class="section">
+            <h2>BC Landing Page Details</h2>
+            <p>Our BC Landing Page is a custom-designed digital business card that perfectly aligns with your brand identity. It is developed using modern HTML and CSS, ensuring a responsive and visually appealing presentation. This landing page serves as the online face of your business, providing essential information in a clear and professional manner.</p>
+            <ul>
+                <li>Fully responsive design</li>
+                <li>Customizable to match your branding</li>
+                <li>Easy navigation for users</li>
+                <li>Includes essential business information</li>
+            </ul>
+        </section>
+
+        <section id="chatbot-details" class="section">
+            <h2>Chatbot Details</h2>
+            <p>The embedded chatbot is powered by GPT-4 and is customized to your specific business needs. It is trained on your data to provide accurate and helpful responses to customer inquiries. This chatbot enhances customer engagement by providing instant support and can be a valuable tool for lead generation.</p>
+            <ul>
+                <li>Powered by GPT-4 for advanced AI capabilities</li>
+                <li>Trained on your business data</li>
+                <li>Provides instant customer support</li>
+                <li>Helps in lead generation and customer engagement</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Get in Touch</h2>
+            <p>Ready to get your personalized business page with an advanced AI chatbot? Contact us now!</p>
+            <p>Phone: <a href="tel:your-phone-number">Your Phone Number</a></p>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            
+            <form name="contact" method="POST" data-netlify="true">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 IntelliAi Marketing. All rights reserved.</p>
+    </footer>
+
+    <!-- Bot Script -->
+    <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="33247"></script>
+</body>
+</html>
