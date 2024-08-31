@@ -15,7 +15,6 @@
             --text-color: #ECF0F1;
             --background-color: #34495E;
             --accent-color: rgba(231, 76, 60, 0.9);
-            --success-color: rgba(46, 204, 113, 0.9);
             --glass-background: rgba(255, 255, 255, 0.1);
             --glass-border: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -42,8 +41,6 @@
             border-radius: 10px;
             border: var(--glass-border);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            will-change: transform;
-            transform: translateZ(0);
         }
 
         .container {
@@ -61,7 +58,6 @@
             width: 100%;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            will-change: transform;
         }
 
         nav ul {
@@ -90,14 +86,12 @@
         }
 
         main {
-            padding-top: 60px;
+            padding-top: 80px; /* Adjusted padding to avoid content being hidden by fixed header */
         }
 
         .section {
             padding: 4rem 2rem;
             margin: 2rem 0;
-            will-change: transform;
-            transform: translateZ(0);
         }
 
         #hero {
@@ -112,14 +106,12 @@
         #hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         #hero h2 {
             font-size: 2rem;
             margin-bottom: 2rem;
-            animation: fadeInUp 1s ease-out 0.5s both;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
@@ -148,18 +140,6 @@
             font-weight: bold;
             margin: 2rem 0;
             text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
-            animation: explosivePrice 2s infinite alternate;
-        }
-
-        @keyframes explosivePrice {
-            0% {
-                transform: scale(1);
-                text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
-            }
-            100% {
-                transform: scale(1.1);
-                text-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 165, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
-            }
         }
 
         h2 {
@@ -179,7 +159,6 @@
             padding: 2rem;
             text-align: center;
             transition: all 0.3s ease;
-            will-change: transform;
         }
 
         .feature-item:hover {
@@ -190,7 +169,6 @@
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         form {
@@ -247,5 +225,30 @@
             margin-top: 4rem;
             border-top: var(--glass-border);
         }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#bclanding-page">BC</a></li>
+                <li><a href="#chatbot-details">IntelliChatt</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>IntelliAi Pro Series</h1>
+                <h2>Custom Business Page with IntelliChatt</h2>
+                <p class="price">$199</p>
+                <a href="#contact" class="btn">Get Started Now</a>
+            </div>
+        </section>
 
-        @keyframes fade
+        <section id="about" class="section glass-effect">
+            <div class="container">
+                <h2>About Our Service</h2>
+                <p>IntelliAi Pro Series offers a digital
