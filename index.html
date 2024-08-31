@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Business Page with Advanced Chatbot - IntelliAi Marketing</title>
-    <meta name="description" content="Get a custom digital business card landing page with an advanced GPT-4 powered chatbot for only $199. Boost your online presence with IntelliAi Marketing.">
+    <title>IntelliAi Pro Series with IntelliChatt - Custom Business Page Solution</title>
+    <meta name="description" content="Get a custom digital business card landing page with an advanced IntelliChatt bot for only $199. Boost your online presence with IntelliAi Pro Series.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background: linear-gradient(135deg, #3498db, #8e44ad);
+            background: linear-gradient(135deg, #c0c0c0, #808080);
             background-attachment: fixed;
             min-height: 100vh;
         }
@@ -137,12 +137,23 @@
         }
 
         .price {
-            font-size: 3rem;
-            color: var(--accent-color);
+            font-size: 4rem;
+            color: #FFD700;
             font-weight: bold;
             margin: 2rem 0;
-            animation: pulse 2s infinite;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+            animation: explosivePrice 2s infinite alternate;
+        }
+
+        @keyframes explosivePrice {
+            0% {
+                transform: scale(1);
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+            }
+            100% {
+                transform: scale(1.1);
+                text-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 165, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+            }
         }
 
         h2 {
@@ -241,21 +252,6 @@
             }
         }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            }
-            50% {
-                transform: scale(1.05);
-                text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
-            }
-            100% {
-                transform: scale(1);
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            }
-        }
-
         @media (max-width: 768px) {
             nav ul {
                 justify-content: space-around;
@@ -277,6 +273,10 @@
             #hero h2 {
                 font-size: 1.5rem;
             }
+
+            .price {
+                font-size: 3rem;
+            }
         }
     </style>
 </head>
@@ -286,7 +286,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#bclanding-page">BC</a></li>
-                <li><a href="#chatbot-details">Bot</a></li>
+                <li><a href="#chatbot-details">IntelliChatt</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -294,8 +294,8 @@
     <main>
         <section id="hero">
             <div class="container">
-                <h1>Custom Business Page with Advanced Chatbot</h1>
-                <h2>by IntelliAi Marketing</h2>
+                <h1>IntelliAi Pro Series</h1>
+                <h2>Custom Business Page with IntelliChatt</h2>
                 <p class="price">$199</p>
                 <a href="#contact" class="btn">Get Started Now</a>
             </div>
@@ -304,7 +304,7 @@
         <section id="about" class="section glass-effect">
             <div class="container">
                 <h2>About Our Service</h2>
-                <p>IntelliAi Marketing offers a digital business card landing page with an advanced GPT-4 powered chatbot embedded, all for a one-time payment of $199. This incredible price includes an HTML/CSS landing page with a customized chatbot trained on your data.</p>
+                <p>IntelliAi Pro Series offers a digital business card landing page with an advanced IntelliChatt bot embedded, all for a one-time payment of $199. This incredible price includes an HTML/CSS landing page with a customized chatbot trained on your data.</p>
             </div>
         </section>
 
@@ -342,12 +342,12 @@
 
         <section id="chatbot-details" class="section glass-effect">
             <div class="container">
-                <h2>Bot Details</h2>
-                <p>The embedded chatbot is powered by GPT-4 and is customized to your specific business needs. It is trained on your data to provide accurate and helpful responses to customer inquiries.</p>
+                <h2>IntelliChatt Details</h2>
+                <p>The embedded IntelliChatt bot is powered by advanced AI and is customized to your specific business needs. It is trained on your data to provide accurate and helpful responses to customer inquiries.</p>
                 <div class="feature-grid">
                     <div class="feature-item glass-effect">
                         <div class="feature-icon">🤖</div>
-                        <h3>GPT-4 Powered</h3>
+                        <h3>AI Powered</h3>
                         <p>Advanced AI capabilities</p>
                     </div>
                     <div class="feature-item glass-effect">
@@ -367,7 +367,7 @@
                     </div>
                 </div>
                 <div class="section-cta">
-                    <a href="https://intellichatt.com" class="btn" target="_blank" rel="noopener noreferrer">Learn More About Our Chatbot</a>
+                    <a href="https://intellichatt.com" class="btn" target="_blank" rel="noopener noreferrer">Learn More About IntelliChatt</a>
                 </div>
             </div>
         </section>
@@ -375,7 +375,7 @@
         <section id="contact" class="section glass-effect">
             <div class="container">
                 <h2>Get in Touch</h2>
-                <p>Ready to get your personalized business page with an advanced AI chatbot? Contact us now!</p>
+                <p>Ready to get your personalized business page with an advanced IntelliChatt bot? Contact us now!</p>
                 <form name="contact" method="POST" data-netlify="true">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
@@ -388,9 +388,4 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 IntelliAi Marketing. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Bot Script -->
-    <script src="https://app.am</antArtifact>
+            <p>&copy; 2024 IntelliAi Pro Series</antArtifact>
