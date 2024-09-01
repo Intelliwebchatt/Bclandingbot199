@@ -14,6 +14,7 @@
             --background-color: #f9f9f9;
             --highlight-color: #ff0000;
             --button-color: #ff9900;
+            --header-gradient: linear-gradient(135deg, #004080, #001f4d);
         }
         body {
             font-family: Arial, sans-serif;
@@ -24,11 +25,12 @@
             padding: 0;
         }
         header {
-            background-color: var(--primary-color);
+            background: var(--header-gradient);
             color: white;
             padding: 3rem 2rem;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid #001f4d;
         }
         header h1 {
             font-size: 2.8rem;
@@ -92,6 +94,7 @@
             font-size: 1.2rem;
             cursor: pointer;
             transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .cta button:hover {
             background-color: var(--highlight-color);
@@ -155,7 +158,7 @@
                 </div>
                 <div class="feature">
                     <h3>Advanced Chatbot</h3>
-                    <p>Get Intellichatt, a cutting-edge GPT-4 chatbot tailored to your data, seamlessly integrated into your site.</p>
+                    <p>Get Intellichat, a cutting-edge GPT-4 chatbot tailored to your data, seamlessly integrated into your site.</p>
                 </div>
                 <div class="feature">
                     <h3>2 Years Free Maintenance</h3>
