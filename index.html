@@ -15,6 +15,9 @@
             --highlight-color: #ff0000;
             --button-color: #ff9900;
             --header-gradient: linear-gradient(135deg, #004080, #001f4d);
+            --form-background: #ffffff;
+            --form-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            --form-padding: 20px;
         }
         body {
             font-family: Arial, sans-serif;
@@ -99,19 +102,26 @@
         .cta button:hover {
             background-color: var(--highlight-color);
         }
-        form {
-            display: grid;
-            gap: 1rem;
-            margin-top: 1rem;
+        #contact-form {
+            background-color: var(--form-background);
+            padding: var(--form-padding);
+            border-radius: 8px;
+            box-shadow: var(--form-shadow);
+            max-width: 600px;
+            margin: 0 auto;
         }
-        input, textarea, select {
+        #contact-form p {
+            margin-bottom: 1rem;
+        }
+        #contact-form input, #contact-form textarea {
             width: 100%;
             padding: 0.75rem;
             border: 1px solid #ddd;
             border-radius: 4px;
             color: #333;
+            margin-bottom: 1rem;
         }
-        button[type="submit"] {
+        #contact-form button[type="submit"] {
             background-color: var(--primary-color);
             color: white;
             border: none;
@@ -119,8 +129,10 @@
             cursor: pointer;
             border-radius: 4px;
             transition: background-color 0.3s;
+            display: block;
+            margin: 0 auto;
         }
-        button[type="submit"]:hover {
+        #contact-form button[type="submit"]:hover {
             background-color: #002244;
         }
         footer {
@@ -139,81 +151,4 @@
                 flex-direction: column;
             }
             .feature {
-                margin-bottom: 1rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Introducing the Intelliai Pro Series</h1>
-        <p class="highlight">Limited Time Offer: $199 Only</p>
-        <p>Boost your online presence with a professionally crafted landing page and advanced chatbot technology, all at an unbeatable price.</p>
-    </header>
-
-    <main>
-        <section class="section">
-            <h2>What's Included</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>Custom Landing Page</h3>
-                    <p>Receive a digital business card-style landing page, meticulously designed using HTML, CSS, and JavaScript. Optimized for speed and SEO.</p>
-                </div>
-                <div class="feature">
-                    <h3>Advanced Chatbot</h3>
-                    <p>Get Intellichat, a cutting-edge GPT-4 chatbot tailored to your data, seamlessly integrated into your site.</p>
-                </div>
-                <div class="feature">
-                    <h3>2 Years Free Maintenance</h3>
-                    <p>Enjoy premium support: Your site and chatbot are maintained at no cost for the first 2 years.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section cta">
-            <h2>Why Choose Intelliai Pro Series?</h2>
-            <p>No recurring fees, just a one-time payment of $199. Optional updates available for a $50 service fee.</p>
-            <button onclick="window.location.href='#contact'">Get Started Today!</button>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <p>Interested in our services? Contact us for more information or to get a free quote using the form below!</p>
-            
-            <!-- Netlify Form -->
-            <form name="contact" method="POST" data-netlify="true">
-                <p class="hidden">
-                    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-                </p>
-                <p>
-                    <label>Your Name: <input type="text" name="name" required /></label>
-                </p>
-                <p>
-                    <label>Your Email: <input type="email" name="email" required /></label>
-                </p>
-                <p>
-                    <label>Your Role: 
-                        <select name="role[]" multiple>
-                            <option value="leader">Leader</option>
-                            <option value="follower">Follower</option>
-                        </select>
-                    </label>
-                </p>
-                <p>
-                    <label>Message: <textarea name="message" required></textarea></label>
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Intelliai Marketing. All rights reserved.</p>
-    </footer>
-
-    <!-- Chatbot script placed at the end of the body -->
-    <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="33247"></script>
-</body>
-</html>
+                margin-bottom
