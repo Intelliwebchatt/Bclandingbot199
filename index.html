@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intelliai Pro Series | $199 Limited Time Offer</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <meta name="description" content="Boost your online presence with Intelliai Pro Series. Custom landing page and advanced chatbot for just $199.">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" media="print" onload="this.media='all'">
     <style>
         :root {
             --primary-color: #003366;
@@ -31,23 +33,26 @@
             background: var(--header-gradient);
             color: white;
             text-align: center;
+            padding: 2rem 1rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-bottom: 5px solid #001f4d;
         }
         header img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
             display: block;
+            margin: 0 auto 1rem;
         }
-        header h1 {
-            font-size: 2.8rem;
+        h1 {
+            font-size: 2.5rem;
             margin: 1rem 0;
+            font-family: 'Pacifico', cursive;
         }
         header p {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
         }
-        header .highlight {
+        .highlight {
             color: var(--highlight-color);
             font-weight: bold;
         }
@@ -75,7 +80,7 @@
             gap: 1rem;
         }
         .feature {
-            flex: 1 1 30%;
+            flex: 1 1 calc(33.333% - 1rem);
             padding: 1rem;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -84,9 +89,6 @@
         .feature h3 {
             margin-bottom: 0.5rem;
             color: var(--secondary-color);
-        }
-        .feature p {
-            margin-bottom: 0.5rem;
         }
         .cta {
             text-align: center;
@@ -113,9 +115,6 @@
             box-shadow: var(--form-shadow);
             max-width: 500px;
             margin: 0 auto;
-        }
-        #contact-form p {
-            margin-bottom: 0.75rem;
         }
         #contact-form input, #contact-form textarea {
             width: 100%;
@@ -162,8 +161,7 @@
 </head>
 <body>
     <header>
-        <!-- Image Added to Top of Page with Full Width -->
-        <img src="https://github.com/Intelliwebchatt/Bclandingbot199/blob/52b15876c0012180c3bd634b1953946703f65b3d/1000043438.png?raw=true" alt="Intelliai Pro Series Banner">
+        <img src="https://github.com/Intelliwebchatt/Bclandingbot199/blob/52b15876c0012180c3bd634b1953946703f65b3d/1000043438.png?raw=true" alt="Intelliai Pro Series Banner" width="1200" height="400">
         <h1>Introducing the Intelliai Pro Series</h1>
         <p class="highlight">Limited Time Offer: $199 Only</p>
         <p>Boost your online presence with a professionally crafted landing page and advanced chatbot technology, all at an unbeatable price.</p>
@@ -191,34 +189,35 @@
         <section class="section cta">
             <h2>Why Choose Intelliai Pro Series?</h2>
             <p>No recurring fees, just a one-time payment of $199. Optional updates available for a $50 service fee.</p>
-            <button onclick="window.location.href='#contact'">Get Started Today!</button>
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started Today!</button>
         </section>
 
         <section id="contact" class="section">
             <h2>Contact Us</h2>
             <p>Have questions or want to check development time? Typically, our turnaround is 3 days, but it can vary based on demand. Contact us below to receive an estimated timeline before finalizing your payment.</p>
 
-            <!-- PayPal QR Code Image -->
             <div style="text-align: center; margin-top: 20px;">
                 <h3>Support Us via PayPal</h3>
-                <img src="https://github.com/Intelliwebchatt/Bclandingbot199/blob/6f82d544267482fe53ee083b0db278b467646b0a/qrcode.png?raw=true" alt="PayPal QR Code" style="max-width: 200px; height: auto;">
+                <img src="https://github.com/Intelliwebchatt/Bclandingbot199/blob/6f82d544267482fe53ee083b0db278b467646b0a/qrcode.png?raw=true" alt="PayPal QR Code" width="200" height="200">
                 <p>Scan the QR code to make a payment or donation via PayPal.</p>
             </div>
 
-            <!-- Netlify Form -->
             <div id="contact-form">
                 <form name="contact" method="POST" data-netlify="true">
                     <p class="hidden">
-                        <label>Don’t fill this out if you're human: <input name="bot-field" type="hidden"></label>
+                        <label>Don't fill this out if you're human: <input name="bot-field" type="hidden"></label>
                     </p>
                     <p>
-                        <label>Your Name: <input type="text" name="name" required /></label>
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required />
                     </p>
                     <p>
-                        <label>Your Email: <input type="email" name="email" required /></label>
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required />
                     </p>
                     <p>
-                        <label>Message: <textarea name="message" required></textarea></label>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
                     </p>
                     <p>
                         <button type="submit">Send</button>
