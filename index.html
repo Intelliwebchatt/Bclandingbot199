@@ -6,11 +6,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intelliai Pro Series - Advanced Chatbot and Custom Landing Page | $199 Limited Offer</title>
     <meta name="description" content="Boost your business with Intelliai Pro Series. Get a custom landing page and advanced chatbot technology for just $199. Limited time offer!">
+    
+    <!-- Ensuring fonts and styles are loaded properly -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lato:wght@300;400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Styling remains unchanged */
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #6699cc;
+            --text-color: #333;
+            --background-color: #f9f9f9;
+            --highlight-color: #ff0000;
+            --button-color: #ff9900;
+            --header-gradient: linear-gradient(135deg, #004080, #001f4d);
+            --form-background: #ffffff;
+            --form-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            --form-padding: 15px;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: var(--header-gradient);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid #001f4d;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            font-family: 'Merriweather', serif;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .highlight {
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-family: 'Merriweather', serif;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .feature {
+            flex: 1 1 calc(33.333% - 1rem);
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .feature h3 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            font-family: 'Merriweather', serif;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .cta button {
+            background-color: var(--button-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .cta button:hover {
+            background-color: var(--highlight-color);
+        }
+        #contact-form {
+            background-color: var(--form-background);
+            padding: var(--form-padding);
+            border-radius: 8px;
+            box-shadow: var(--form-shadow);
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #contact-form input, #contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            color: #333;
+            margin-bottom: 0.75rem;
+            text-align: center;
+        }
+        #contact-form button[type="submit"] {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+        #contact-form button[type="submit"]:hover {
+            background-color: #002244;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+        .hidden {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+            }
+            .feature {
+                margin-bottom: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -49,32 +203,4 @@
 
         <section id="contact" class="section">
             <h2>Contact Us</h2>
-            <p>Have questions or want to check development time? Typically, our turnaround is 3 days, but it can vary based on demand. Contact us below to receive an estimated timeline before finalizing your payment.</p>
-
-            <div style="text-align: center; margin-top: 20px;">
-                <h3>Support Us via PayPal</h3>
-                <img src="https://github.com/Intelliwebchatt/Bclandingbot199/blob/6f82d544267482fe53ee083b0db278b467646b0a/qrcode.png?raw=true" alt="PayPal QR Code for Support" width="200" height="200">
-                <p>Scan the QR code to make a payment or donation via PayPal.</p>
-            </div>
-
-            <div id="contact-form">
-                <!-- Updated Form to fix display issues -->
-                <form name="contact" method="POST" data-netlify="true">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Intelliai Pro Series. All rights reserved.</p>
-    </footer>
-
-    <!-- Ensure chatbot script is properly loaded -->
-    <script src="path_to_your_chatbot_script.js"></script>
-</body>
-
-</html>
+            <p>Have questions or want to check development
